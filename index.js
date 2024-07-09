@@ -30,7 +30,8 @@ app.use((req, _, next) => {
 
 // Route to get client's IP address
 app.get("/myip", (req, res) => {
-  const clientIp = req.clientIp;
+  const clientIp = req.ip;
+  console.log(clientIp);
   res.send(`Your IP address is ${clientIp}`);
 });
 
